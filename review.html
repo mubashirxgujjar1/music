@@ -1,0 +1,138 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Music Website</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="review.css">
+    </head>
+</head>
+<body>
+<header>
+    
+        <div class="menu_side">
+            <h1>Genres</h1>
+            <div class="genre">
+                <ul>
+                    <a href="rap.html">
+                        <i class="fas fa-user-plus pe-2"></i>
+                        <h4>🎧Rap</h4>
+                    </a>
+                    <a href="pop.html">
+                        <i class="fas fa-user-plus pe-2"></i>
+                        <h4>🎧Pop</h4>
+                    </a>
+                    <a href="metal.html">
+                        <i class="fas fa-user-plus pe-2"></i>
+                        <h4>🎧Metal</h4>
+                    </a>
+                    
+                        <a href="rock.html">
+                            <i class="fas fa-user-plus pe-2"></i>
+                            <h4>🎧Rock</h4>
+                        </a>
+                   
+                        <a href="jazz.html">
+                            <i class="fas fa-user-plus pe-2"></i>
+                            <h4>🎧Jazz</h4>
+                        </a>
+                    
+                        <a href="indie.html">
+                            <i class="fas fa-user-plus pe-2"></i>
+                            <h4>🎧Indie</h4>
+                        </a>
+                    
+                        <a href="clasic.html">
+                            <i class="fas fa-user-plus pe-2"></i>
+                            <h4>🎧Classic</h4>
+                        </a>
+                   
+                </ul>
+        
+            </div>
+        </div>
+    <div class="song_side">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Music world</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="song.html">Popular Songs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="artist.html">Popular Artists</a>
+                </li>
+              
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+        </nav>
+        <!-- Latest Reviews Section -->
+        <div class="latest-reviews">
+            <h2>Latest Reviews</h2>
+            <div class="review">
+                <div class="review-box">
+                    <h3><a href="#" class="review-link">Blinding Lights - The Weeknd</a></h3>
+                    <p class="review-description">This song is amazing! The beat, the vocals, everything!</p>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-box">
+                    <h3><a href="#" class="review-link">Another Song - Artist</a></h3>
+                    <p class="review-description">This is another great song with fantastic lyrics.</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="review-box">
+                    <h3><a href="#" class="review-link">Blinding Lights - The Weeknd</a></h3>
+                    <p class="review-description">This song is amazing! The beat, the vocals, everything!</p>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-box">
+                    <h3><a href="#" class="review-link">Another Song - Artist</a></h3>
+                    <p class="review-description">This is another great song with fantastic lyrics.</p>
+                </div>
+            </div>
+            
+            <!-- Add more reviews as needed -->
+        </div>
+    </div>
+</header>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for review description toggle -->
+<script>
+    // JavaScript for showing/hiding review descriptions
+    document.addEventListener("DOMContentLoaded", function() {
+        const reviewLinks = document.querySelectorAll(".review-link");
+
+        reviewLinks.forEach(function(link) {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const review = this.closest(".review");
+                review.classList.toggle("show-description");
+            });
+        });
+    });
+</script>
+</body>
+</html>

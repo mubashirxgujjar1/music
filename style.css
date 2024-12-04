@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: #121213;
+    display: grid;
+    place-items: center;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .menu_side,
+.song_side {
+    width: 17%;
+    height: 100%;
+    background: #111727;
+    padding: 20px 0;
+    /* overflow-y: auto; Add scrollbar for overflow */
+}
+
+header .song_side {
+    width: 83%;
+    height: 100%;
+    background: #0b1320;
+    padding: 20px;
+    overflow-y: auto; /* Add scrollbar for overflow */
+}
+
+header .master_play {
+    width: 100%;
+    height: 11%;
+    background: #111727;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+header .menu_side h1 {
+    padding-top: 3  px;
+    padding-left: 10px;
+    font-size: 28px;
+    margin: 15px 0 0 20px;
+    font-weight: 500;
+}
+
+header .menu_side .genre {
+    font-size: 30px;
+    margin: 20px 0 0 20px;
+    font-weight: 500;
+}
+
+header .menu_side .genre h4 {
+    padding: 15px 40px;
+}
+
+.music-wave {
+    height: 50px; /* Full height of parent container */
+    background-color: #111727;
+    padding: 10px 0px 0px 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 20px;
+    height: 50px; /* Each bar size is 1 inch (96px) */
+    background-color: #022b57;
+    animation: soundWave 1s infinite alternate;
+}
+
+.bar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.bar:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes soundWave {
+    from {
+        height: 20px; /* Start height */
+    }
+    to {
+        height: 50px; /* End height */
+    }
+}
+
+header .master_play .audio-container {
+    padding-left: 50px;
+    width: fit-content;
+}
+
+/* Popular Songs Section Styles */
+
+header .song_side .popular-songs {
+    padding: 20px;
+}
+
+header .song_side .popular-songs h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+header .song_side .popular-songs .song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #1f2937;
+    border-radius: 8px;
+}
+
+header .song_side .popular-songs .song img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+header .song_side .popular-songs .song h3,
+header .song_side .popular-songs .song p {
+    margin: 0;
+    color: #fff;
+}
+
+header .song_side .popular-songs .btn-primary {
+    margin-top: 20px;
+}
+
+/* Popular Artists Section Styles */
+
+header .song_side .popular-artists {
+    padding: 20px;
+}
+
+header .song_side .popular-artists h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+header .song_side .popular-artists .artist {
+    text-align: center;
+}
+
+header .song_side .popular-artists .artist img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header .song_side .popular-artists .artist h3 {
+    margin: 0;
+    color: #fff;
+}
+
+/* Latest Reviews Section Styles */
+
+header .song_side .latest-reviews {
+    padding: 20px;
+    margin-top: 20px; /* Adjust margin to remove space */
+}
+
+header .song_side .latest-reviews h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+header .song_side .latest-reviews .review {
+    /* margin-bottom: 20px; */
+    cursor: pointer;
+}
+
+header .song_side .latest-reviews .review-box {
+    padding: 20px;
+    background-color: #1f2937;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+header .song_side .latest-reviews .review-box:hover {
+    background-color: #022b57;
+}
+
+header .song_side .latest-reviews .review h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+header .song_side .latest-reviews .review p {
+    color: #ccc;
+    margin: 0;
+}
